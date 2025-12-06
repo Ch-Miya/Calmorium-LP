@@ -1,0 +1,487 @@
+@charset "utf-8";
+
+/* body */
+body {
+    font-family: "Catamaran", " Noto Sans JP", serif;
+    font-size: 16px;
+    background-color: #f0f8ff;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    background-color: #425377;
+    color: #fdfdfd;
+    padding: 0 135px;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.kana-logo {
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    background-image: url(../images/logo-kana.svg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+header li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+header li a {
+    color: #fdfdfd;
+}
+
+header #top {
+    width: 280px;
+}
+
+.logo-SNS img {
+    width: 20px;
+    height: auto;
+}
+
+/* h2 */
+h2.title-h2 {
+    position: relative;
+    padding: 15px 8px;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: #333;
+    font-weight: 400;
+    display: block;
+    box-sizing: border-box;
+    max-width: 140px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 24px;
+    margin-inline: auto;
+}
+
+.title-h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    top: 0;
+    rotate: 45deg;
+    border-bottom: solid 1px #333;
+    border-left: solid 1px #333;
+}
+
+.title-h2 span::before,
+.title-h2 span::after {
+    content: "";
+    position: absolute;
+    background: #333;
+    width: 40px;
+    height: 1px;
+    display: inline-block;
+}
+
+.title-h2 span::before {
+    left: 25px;
+    top: 1px;
+    rotate: 45deg;
+}
+
+.title-h2 span::after {
+    left: 25px;
+    bottom: -2px;
+    rotate: -45deg;
+}
+
+/* h3 */
+h3 {
+    border-bottom: solid 1px #333;
+    padding: 8px 16px;
+    font-size: 21px;
+    letter-spacing: 0.1em;
+    color: #333;
+    font-weight: 400;
+    display: block;
+    box-sizing: border-box;
+    max-width: 500px;
+    text-align: left;
+    margin: 24px;
+    margin-inline: auto;
+}
+
+/* ボタン */
+.btn {
+    font-weight: 700;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 1rem 4rem;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+    color: #fdfdfd;
+    border-radius: 0.5rem;
+    background-color: #425377;
+}
+.btn a {
+    text-decoration: none;
+}
+
+/* メイン */
+main {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* パララックス用 */
+.parallax {
+    min-height: 500px;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax.p1 {
+    background-image: url(../images/maid-top.png);
+}
+
+.parallax.p2 {
+    background-image: url(../images/store@1x.png);
+}
+
+.parallax.p1 .left-top,
+.parallax.p2 .left-top {
+    position: absolute;
+    background-image: url(../images/deco-blue@1x.png);
+    top: 0;
+    left: 0;
+    width: 365px;
+    height: 320px;
+}
+
+.parallax.p1 .right-bottom,
+.parallax.p2 .right-bottom {
+    position: absolute;
+    background-image: url(../images/deco-white@1x.png);
+    right: 0;
+    bottom: 0;
+    width: 346px;
+    height: 290px;
+}
+
+/* コンセプト */
+#concept {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    background-color: #f0f8ff;
+}
+
+.concept-item {
+    display: flex;
+    width: 1170px;
+    height: 380px;
+    margin-left: 50px;
+}
+
+.concept-text {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px;
+}
+
+#concept img {
+    border-radius: 50%;
+    width: 264px;
+    height: 264px;
+    object-fit: cover;
+}
+
+/* 円弧 */
+.menu-bg {
+    background-color: #425377;
+    color: #fdfdfd;
+    border-radius: 1170px 1170px 0 0 / 1000px 1000px;
+    padding: 400px 0 80px 0;
+    background-image: url(../images/star@1x.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 80%;
+}
+
+/* メニュー */
+#menu h2 {
+    color: #fdfdfd;
+}
+#menu h3 {
+    color: #fdfdfd;
+    border-bottom: solid 1px #fdfdfd;
+}
+
+/* メニュー詳細 */
+.menuDetailSec {
+    padding: 30px 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "title cup"
+        "text cup"
+        "star cup";
+    position: relative;
+}
+
+.menuDetailSec h3 {
+    grid-area: title;
+}
+
+.menuDetailSec p {
+    grid-area: text;
+}
+
+.menuDetailSec .menu {
+    grid-area: cup;
+}
+
+.menuDetailSec .star {
+    grid-area: star;
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.menuDetailSec img {
+    width: 570px;
+    border-radius: 0.5em;
+}
+
+.cup-wrap {
+    position: relative;
+    grid-area: cup;
+}
+
+.menu-deco-left {
+    position: absolute;
+    top: 300px;
+    right: -10px;
+}
+
+.menu-deco-right {
+    position: absolute;
+    top: 350px;
+    left: -20px;
+}
+
+.menu-deco-left p,
+.menu-deco-right p {
+    position: absolute;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 700;
+    -ms-transform: translate(50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    top: 30%;
+    right: 55%;
+}
+
+.menu-deco-left img,
+.menu-deco-right img {
+    width: 300px;
+    height: auto;
+}
+
+.food-menu img {
+    width: 370px;
+    filter: drop-shadow(10px 10px 8px #333);
+}
+
+.reverse {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "pot title"
+        "pot text"
+        "pot star";
+}
+
+.reverse h3 {
+    grid-area: title;
+}
+.reverse p {
+    grid-area: text;
+}
+
+.reverse .menu {
+    grid-area: pot;
+}
+
+.reverse .star {
+    grid-area: star;
+}
+
+.food-menu {
+    padding-top: 30px;
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    grid-template-columns: 30% 30% 30%;
+}
+
+.menu-bg .btn {
+    color: #333;
+    background-color: #fdfdfd;
+}
+
+/* お知らせ */
+#news {
+    background-color: #f0f8ff;
+    padding-top: 50px;
+}
+
+#news ul {
+    margin: 100px 0 100px 100px;
+}
+
+.news_list {
+    margin: 50px 0;
+    border: 1px solid #333;
+}
+
+.news_list li {
+    padding: 15px 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+/* アクセス */
+#access {
+    background-color: #f0f8ff;
+    margin: 50px 0;
+}
+
+#access .head {
+    font-weight: 700;
+}
+#access div {
+    margin-bottom: 50px;
+}
+
+.access-item {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "open map"
+        "address map"
+        "reserve map";
+}
+
+.access-item .open {
+    grid-area: open;
+}
+
+.access-item .address {
+    grid-area: address;
+}
+
+.access-item .reserve {
+    grid-area: reserve;
+}
+
+.access-item .map {
+    grid-area: map;
+}
+
+.reserve.btn {
+    color: #333;
+    background-color: #fad856;
+}
+
+/* ページトップ用 */
+.page-top {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 40px;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    border: 0;
+    background: none;
+    transition: 0.2s;
+}
+
+.page-top span {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 85px;
+    margin: 0;
+    letter-spacing: 5px;
+    text-align: right;
+}
+
+.page-top span::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -5px;
+    width: 2px;
+    height: 20px;
+    background: #000;
+    transform: skewX(-150deg);
+}
+
+.page-top span::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 2px;
+    height: 85px;
+    background: #000;
+}
+
+.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* フッター */
+footer {
+    background-color: #425377;
+    text-align: center;
+    color: #fdfdfd;
+    position: relative;
+}
+
+.left-bottom {
+    position: absolute;
+    background-image: url(../images/deco-blue-footer@1x.png);
+    left: 0;
+    bottom: 0;
+    width: 283px;
+    height: 276px;
+}
