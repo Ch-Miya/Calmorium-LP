@@ -66,7 +66,7 @@ h2.title-h2 {
     max-width: 140px;
     text-align: center;
     text-transform: uppercase;
-    margin: 24px;
+    margin: 50px;
     margin-inline: auto;
 }
 
@@ -123,35 +123,40 @@ h3 {
 
 /* ボタン */
 .btn {
+    width: 70%;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn a {
     font-weight: 700;
     line-height: 1.5;
     display: inline-block;
     padding: 1rem 4rem;
-    text-align: center;
-    vertical-align: middle;
     letter-spacing: 0.1em;
-    color: #fdfdfd;
-    border-radius: 0.5rem;
-    background-color: #425377;
-}
-.btn a {
     text-decoration: none;
-}
-
-/* メイン */
-main {
-    max-width: 1170px;
-    margin: 0 auto;
+    color: #fdfdfd;
+    background-color: #425377;
+    border-radius: 0.5rem;
 }
 
 /* パララックス用 */
+.parallax-wrapper {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
 .parallax {
-    min-height: 500px;
-    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    position: relative;
 }
 
 .parallax.p1 {
@@ -162,8 +167,13 @@ main {
     background-image: url(../images/store@1x.png);
 }
 
-.parallax.p1 .left-top,
-.parallax.p2 .left-top {
+.parallax-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax-content .left-top {
     position: absolute;
     background-image: url(../images/deco-blue@1x.png);
     top: 0;
@@ -172,8 +182,7 @@ main {
     height: 320px;
 }
 
-.parallax.p1 .right-bottom,
-.parallax.p2 .right-bottom {
+.parallax-content .right-bottom {
     position: absolute;
     background-image: url(../images/deco-white@1x.png);
     right: 0;
@@ -183,12 +192,6 @@ main {
 }
 
 /* コンセプト */
-#concept {
-    padding-top: 50px;
-    margin-bottom: 50px;
-    background-color: #f0f8ff;
-}
-
 .concept-item {
     display: flex;
     width: 1170px;
@@ -214,16 +217,24 @@ main {
     background-color: #425377;
     color: #fdfdfd;
     border-radius: 1170px 1170px 0 0 / 1000px 1000px;
-    padding: 400px 0 80px 0;
+    padding: 350px 0 80px 0;
     background-image: url(../images/star@1x.png);
     background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 80%;
+    background-position: center -40px;
+    background-size: clamp(400px, 60%, 800px);
 }
 
 /* メニュー */
 #menu h2 {
     color: #fdfdfd;
+}
+#menu h2.title-h2::before {
+    border-bottom: solid 1px #fdfdfd;
+    border-left: solid 1px #fdfdfd;
+}
+#menu h2.title-h2 span::before,
+#menu h2.title-h2 span::after {
+    background: #fdfdfd;
 }
 #menu h3 {
     color: #fdfdfd;
@@ -325,12 +336,27 @@ main {
     grid-area: text;
 }
 
-.reverse .menu {
+.reverse .menu-img-wrap {
     grid-area: pot;
 }
 
 .reverse .star {
     grid-area: star;
+}
+
+.menu-img-wrap {
+    width: 570px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0.5em;
+}
+
+.menu-img-wrap .menu {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.3);
+    transform-origin: center;
 }
 
 .food-menu {
@@ -341,7 +367,7 @@ main {
     grid-template-columns: 30% 30% 30%;
 }
 
-.menu-bg .btn {
+.menu-bg .btn a {
     color: #333;
     background-color: #fdfdfd;
 }
@@ -349,24 +375,41 @@ main {
 /* お知らせ */
 #news {
     background-color: #f0f8ff;
-    padding-top: 50px;
-}
-
-#news ul {
-    margin: 100px 0 100px 100px;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .news_list {
-    margin: 50px 0;
-    border: 1px solid #333;
+    width: 70%;
+    margin: 60px auto;
+}
+
+.news_list ul {
+    margin: 0;
+    padding: 0;
 }
 
 .news_list li {
-    padding: 15px 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    list-style-type: none;
+    list-style: none;
+    display: grid;
+    text-align: left;
+    grid-template-columns: 200px 1fr;
+    padding: 14px 100px;
+}
+
+.news_list li:first-child {
+    border-top: 1px solid #333;
+}
+
+.news_list li:last-child {
+    border-bottom: 1px solid #333;
+}
+
+.news_list p {
+    margin: 0;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* アクセス */
@@ -378,6 +421,7 @@ main {
 #access .head {
     font-weight: 700;
 }
+
 #access div {
     margin-bottom: 50px;
 }
@@ -391,6 +435,9 @@ main {
         "open map"
         "address map"
         "reserve map";
+    max-width: 1170px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 .access-item .open {
@@ -410,8 +457,12 @@ main {
 }
 
 .reserve.btn {
+    justify-content: start;
+}
+
+.reserve.btn a {
+    background: #fad856;
     color: #333;
-    background-color: #fad856;
 }
 
 /* ページトップ用 */
@@ -450,7 +501,7 @@ main {
     right: -5px;
     width: 2px;
     height: 20px;
-    background: #000;
+    background: #333;
     transform: skewX(-150deg);
 }
 
@@ -461,7 +512,7 @@ main {
     right: 0;
     width: 2px;
     height: 85px;
-    background: #000;
+    background: #333;
 }
 
 .is-active {

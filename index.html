@@ -43,9 +43,12 @@
 	</header>
 	<!-- メイン -->
 	<main>
-		<div class="parallax p1">
-			<figure class="left-top"></figure>
-			<figure class="right-bottom"></figure>
+		<div class="parallax-wrapper">
+			<div class="parallax p1"></div>
+			<div class="parallax-content">
+				<figure class="left-top"></figure>
+				<figure class="right-bottom"></figure>
+			</div>
 		</div>
 		<!-- コンセプト -->
 		<section id="concept">
@@ -71,11 +74,9 @@
 		<!-- メニュー -->
 		<section id="menu">
 			<div class="menu-bg">
-				<!-- 星のカーテン -->
 				<h2 class="title-h2"><span>menu</span></h2>
 				<section class="menuDetailSec">
 					<h3>tea flight</h3>
-					<!-- 下線 -->
 					<div class="cup-wrap">
 						<img class="menu" src="images/menu-1.jpg" alt="ティーカップ" />
 						<div class="menu-deco-left">
@@ -88,16 +89,17 @@
 						すべてホットストレートでのご提供となり、混雑時は2時間制となります。<br />
 						気分に合わせて、紅茶の豊かな香りをお楽しみください。
 					</p>
-					<!-- 星の画像 -->
 					<img class="star" src="images/menu-left-star@1x.png" alt="星の飾り画像" />
 				</section>
 				<section class="menuDetailSec reverse">
-					<h3>pot tea</h3>
 					<div class="menu-deco-right">
 						<img src="images/menu-left@1x.png" alt="" />
 						<p>Pot Tea</p>
 					</div>
-					<img class="menu" src="images/menu-2.jpg" alt="ポット" />
+					<h3>pot tea</h3>
+					<div class="menu-img-wrap">
+						<img class="menu" src="images/menu-2.jpg" alt="ポット" />
+					</div>
 					<p>
 						選び抜いた茶葉を、たっぷり楽しめるポットでご提供します。<br />
 						2〜3杯ほどお飲みいただける容量で、すべてホットストレートティーでのご提供です。<br />
@@ -119,17 +121,19 @@
 						<h3>muffin</h3>
 					</div>
 				</section>
-				<!-- ボタン -->
 				<div class="btn">
 					<a href=""><span>more</span></a>
 				</div>
 			</div>
 		</section>
 		<!-- ニュース -->
-		<section class="parallax p2">
-			<figure class="left-top"></figure>
-			<figure class="right-bottom"></figure>
-		</section>
+		<div class="parallax-wrapper">
+			<div class="parallax p2"></div>
+			<div class="parallax-content">
+				<figure class="left-top"></figure>
+				<figure class="right-bottom"></figure>
+			</div>
+		</div>
 		<section id="news">
 			<h2 class="title-h2"><span>news</span></h2>
 			<div class="news_list">
@@ -156,7 +160,6 @@
 					</li>
 				</ul>
 			</div>
-			<!-- ボタン -->
 			<div class="btn">
 				<a href=""><span>more</span></a>
 			</div>
@@ -180,9 +183,8 @@
 						TEL：080-xxxx-xxxx<br />
 					</p>
 				</div>
-				<!-- ボタン -->
 				<div class="reserve btn">
-					<a href=""><span>ご予約はこちら</span></a>
+					<a href="#"><span>ご予約はこちら</span></a>
 				</div>
 				<!-- 地図 -->
 				<div class="map">
@@ -194,6 +196,7 @@
 			</div>
 		</section>
 	</main>
+	<!-- フッター -->
 	<footer>
 		<figure class="left-bottom"></figure>
 		<p>&copy; 2025 Calmorium</p>
@@ -201,7 +204,6 @@
 	<p class="page-top">
 		<a href="#top"><span>page top</span></a>
 	</p>
-	<!-- フッター -->
 	<script src="js/pagetop.js"></script>
 </body>
 
