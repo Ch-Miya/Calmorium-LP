@@ -5,6 +5,8 @@ body {
     font-family: "Catamaran", " Noto Sans JP", serif;
     font-size: 16px;
     background-color: #f0f8ff;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* ヘッダー */
@@ -15,7 +17,7 @@ header {
     height: 160px;
     background-color: #425377;
     color: #fdfdfd;
-    padding: 0 135px;
+    padding: 0 10%;
 }
 
 .logo-block {
@@ -38,6 +40,7 @@ header li {
     list-style-type: none;
     display: inline-block;
     padding: 10px;
+    text-transform: capitalize;
 }
 
 header li a {
@@ -119,6 +122,7 @@ h3 {
     text-align: left;
     margin: 24px;
     margin-inline: auto;
+    text-transform: capitalize;
 }
 
 /* ボタン */
@@ -175,34 +179,40 @@ h3 {
 
 .parallax-content .left-top {
     position: absolute;
-    background-image: url(../images/deco-blue@1x.png);
     top: 0;
     left: 0;
     width: 365px;
     height: 320px;
+    background-image: url(../images/deco-blue@1x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .parallax-content .right-bottom {
     position: absolute;
-    background-image: url(../images/deco-white@1x.png);
     right: 0;
-    bottom: 0;
+    bottom: -0.5px;
     width: 346px;
     height: 290px;
+    background-image: url(../images/deco-white@1x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* コンセプト */
 .concept-item {
     display: flex;
-    width: 1170px;
-    height: 380px;
-    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10% 100px;
+    gap: 40px;
 }
 
-.concept-text {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 100px;
+.concept-text p {
+    margin-left: 30px;
+    line-height: 1.5em;
+    flex: 1;
+    margin-bottom: 20px;
 }
 
 #concept img {
@@ -210,6 +220,7 @@ h3 {
     width: 264px;
     height: 264px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 /* 円弧 */
@@ -243,20 +254,24 @@ h3 {
 
 /* メニュー詳細 */
 .menuDetailSec {
-    padding: 30px 30px;
+    padding: 30px 10%;
     display: grid;
+    gap: 50px;
     justify-content: center;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-        "title cup"
-        "text cup"
-        "star cup";
+        "cup title"
+        "cup text"
+        "cup star";
     position: relative;
 }
 
 .menuDetailSec h3 {
     grid-area: title;
+    width: 100%;
+    margin: 0 0 24px 0;
+    align-self: end;
 }
 
 .menuDetailSec p {
@@ -279,38 +294,71 @@ h3 {
     border-radius: 0.5em;
 }
 
-.cup-wrap {
+.menu-block {
     position: relative;
+    width: 570px;
+    margin: 0 auto;
+}
+
+.menu-block.right {
     grid-area: cup;
 }
 
-.menu-deco-left {
-    position: absolute;
-    top: 300px;
-    right: -10px;
+.menu-img-wrap {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5em;
 }
 
-.menu-deco-right {
+.menu-img-wrap img.menu {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform-origin: center;
+}
+
+.menu-img-wrap.left img.menu {
+    transform: scale(1.3);
+}
+
+.menu-deco {
     position: absolute;
-    top: 350px;
+    z-index: 10;
+    width: 300px;
+    height: 150px;
+}
+
+.menu-deco.right {
+    bottom: -75px;
+    left: -50px;
+    background-image: url(../images/menu-right@1x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.menu-deco.left {
+    bottom: -75px;
+    right: -50px;
+    background-image: url(../images/menu-left@1x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.menu-deco p {
+    position: absolute;
+    inset: 0;
+    bottom: 20px;
     left: -20px;
-}
-
-.menu-deco-left p,
-.menu-deco-right p {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #333;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 700;
-    -ms-transform: translate(50%, -50%);
-    -webkit-transform: translate(50%, -50%);
-    transform: translate(50%, -50%);
-    top: 30%;
-    right: 55%;
 }
 
-.menu-deco-left img,
-.menu-deco-right img {
+.menu-deco img {
     width: 300px;
     height: auto;
 }
@@ -321,12 +369,12 @@ h3 {
 }
 
 .reverse {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-        "pot title"
-        "pot text"
-        "pot star";
+        "title pot"
+        "text pot"
+        "star pot";
 }
 
 .reverse h3 {
@@ -336,27 +384,12 @@ h3 {
     grid-area: text;
 }
 
-.reverse .menu-img-wrap {
+.menu-block.left {
     grid-area: pot;
 }
 
 .reverse .star {
     grid-area: star;
-}
-
-.menu-img-wrap {
-    width: 570px;
-    height: auto;
-    overflow: hidden;
-    border-radius: 0.5em;
-}
-
-.menu-img-wrap .menu {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.3);
-    transform-origin: center;
 }
 
 .food-menu {
@@ -367,9 +400,21 @@ h3 {
     grid-template-columns: 30% 30% 30%;
 }
 
-.menu-bg .btn a {
+.food-menu img {
+    display: block;
+    margin-inline: auto;
+}
+
+.menu.btn {
+    padding: 0 10%;
+    width: auto;
+}
+
+.menu.btn a {
     color: #333;
     background-color: #fdfdfd;
+    display: block;
+    margin: 40px 0 0;
 }
 
 /* お知らせ */
@@ -412,10 +457,14 @@ h3 {
     text-overflow: ellipsis;
 }
 
+#news .btn {
+    width: 70%;
+}
+
 /* アクセス */
 #access {
     background-color: #f0f8ff;
-    margin: 50px 0;
+    margin: 50px 135px;
 }
 
 #access .head {
@@ -444,12 +493,18 @@ h3 {
     grid-area: open;
 }
 
+.access-item .open .head,
+.access-item .address .head {
+    text-transform: capitalize;
+}
+
 .access-item .address {
     grid-area: address;
 }
 
 .access-item .reserve {
     grid-area: reserve;
+    align-self: start;
 }
 
 .access-item .map {
@@ -457,7 +512,8 @@ h3 {
 }
 
 .reserve.btn {
-    justify-content: start;
+    z-index: 20;
+    width: 100%;
 }
 
 .reserve.btn a {
@@ -472,7 +528,7 @@ h3 {
     align-items: center;
     justify-content: center;
     right: 40px;
-    bottom: 20px;
+    bottom: 60px;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -525,14 +581,18 @@ footer {
     background-color: #425377;
     text-align: center;
     color: #fdfdfd;
-    position: relative;
+    padding: 16px 0;
 }
 
-.left-bottom {
+.footer-deco {
     position: absolute;
-    background-image: url(../images/deco-blue-footer@1x.png);
-    left: 0;
-    bottom: 0;
+    left: 0px;
+    bottom: 0px;
     width: 283px;
     height: 276px;
+    background-image: url(../images/deco-blue-footer@1x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin: 0;
 }
