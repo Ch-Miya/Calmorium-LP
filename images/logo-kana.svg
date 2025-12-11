@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 40.53">
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.3 40.53">
   <defs>
     <style>
       .cls-1 {
+        letter-spacing: .05em;
+      }
+
+      .cls-2 {
+        letter-spacing: .03em;
+      }
+
+      .cls-3 {
+        letter-spacing: .2em;
+      }
+
+      .cls-4 {
+        letter-spacing: .2em;
+      }
+
+      .cls-5 {
+        letter-spacing: .08em;
+      }
+
+      .cls-6 {
         fill: #fdfdfd;
         font-family: NotoSerifJP-Regular, 'Noto Serif JP';
         font-size: 21px;
         font-variation-settings: 'wght' 400;
       }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
     </style>
   </defs>
   <g id="_レイヤー_5" data-name="レイヤー 5">
-    <text class="cls-1" transform="translate(0 18.48)"><tspan x="0" y="0">カルモリウム</tspan></text>
+    <text class="cls-6" transform="translate(0 18.48)"><tspan class="cls-5" x="0" y="0">カ</tspan><tspan class="cls-3" x="22.59" y="0">ル</tspan><tspan class="cls-1" x="47.72" y="0">モ</tspan><tspan class="cls-2" x="69.68" y="0">リ</tspan><tspan class="cls-7" x="91.38" y="0">ウ</tspan><tspan class="cls-4" x="112.3" y="0">ム</tspan></text>
   </g>
 </svg>
