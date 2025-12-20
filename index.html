@@ -21,29 +21,42 @@
 			</h1>
 			<div class="kana-logo"></div>
 		</div>
-		<nav>
-			<ul>
-				<li class="pc-only"><a href="#concept">concept</a></li>
-				<li class="pc-only"><a href="#menu">menu</a></li>
-				<li class="pc-only"><a href="#news">news</a></li>
-				<li class="pc-only"><a href="#access">access</a></li>
-				<li class="sns-only">
-					<a href="#">
-						<div class="logo-SNS">
-							<img src="images/logo_x.svg" alt="Xへのリンク" />
-						</div>
-					</a>
-				</li>
-				<li class="sns-only">
-					<a href="#">
-						<div class="logo-SNS">
-							<img src="images/logo_Instagram.svg" alt="Instagramへのリンク" />
-						</div>
-					</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="header-right">
+			<nav class="pc-menu">
+				<ul>
+					<li class="pc-only"><a href="#concept">concept</a></li>
+					<li class="pc-only"><a href="#menu">menu</a></li>
+					<li class="pc-only"><a href="#news">news</a></li>
+					<li class="pc-only"><a href="#access">access</a></li>
+				</ul>
+			</nav>
+			<div class="header-sns">
+				<a href="#">
+					<div class="logo-SNS">
+						<img src="images/logo_x.svg" alt="Xへのリンク" />
+					</div>
+				</a>
+				<a href="#">
+					<div class="logo-SNS">
+						<img src="images/logo_Instagram.svg" alt="Instagramへのリンク" />
+					</div>
+				</a>
+			</div>
+		</div>
 	</header>
+	<div class="hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<nav class="sp-nav">
+		<ul>
+			<li><a href="#concept">concept</a></li>
+			<li><a href="#menu">menu</a></li>
+			<li><a href="#news">news</a></li>
+			<li><a href="#access">access</a></li>
+		</ul>
+	</nav>
 	<!-- メイン -->
 	<main>
 		<div class="parallax-wrapper">
@@ -210,6 +223,8 @@
 		<a href="#top"><span>page top</span></a>
 	</p>
 	<script src="js/pagetop.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/hamburger.js"></script>
 </body>
 
 </html>

@@ -12,12 +12,18 @@ body {
 /* ヘッダー */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 160px;
     background-color: #425377;
     color: #fdfdfd;
     padding: 0 10%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 32px;
 }
 
 .logo-block {
@@ -36,9 +42,22 @@ header {
     background-repeat: no-repeat;
 }
 
-.pc-only,
-.sns-only {
+.pc-only {
     display: inline-block;
+}
+
+.header-sns {
+    display: flex;
+    gap: 16px;
+}
+
+.header-sns a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.sp-nav {
+    display: none;
 }
 
 header li {
