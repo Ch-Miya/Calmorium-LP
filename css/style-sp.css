@@ -1,0 +1,147 @@
+@media screen and (max-width: 640px) {
+    h3 {
+        width: 60%;
+    }
+
+    header {
+        height: 100%;
+        padding: 5% 50px;
+    }
+
+    .logo-block {
+        width: 40%;
+    }
+
+    .kana-logo,
+    .pc-only {
+        display: none;
+    }
+
+    .parallax-wrapper {
+        height: 60vh;
+        min-height: 300px;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+        background-position: center center;
+    }
+
+    .parallax-content .left-top,
+    .parallax-content .right-bottom {
+        width: 40vw;
+        height: 40vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .concept-item {
+        flex-direction: column;
+        margin: 0 5% 60px;
+        gap: 24px;
+    }
+
+    .concept-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .concept-text p {
+        margin-left: 0;
+    }
+
+    .menuDetailSec {
+        padding: 20px 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 24px;
+        grid-template-areas:
+            "cup"
+            "title"
+            "text"
+            "star";
+    }
+
+    .menu-img-wrap {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .menu-img-wrap img.menu {
+        width: 100%;
+        max-width: none;
+    }
+
+    .menu-deco.right,
+    .menu-deco.left {
+        display: none;
+    }
+
+    .reverse {
+        padding: 20px 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 24px;
+        grid-template-areas:
+            "pot"
+            "title"
+            "text"
+            "star";
+    }
+
+    .food-menu {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .food-menu img {
+        width: 60%;
+    }
+
+    .news_list li {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 14px 0;
+    }
+
+    .news_list p {
+        white-space: normal;
+    }
+
+    #news .btn {
+        justify-content: center;
+    }
+
+    .access-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "open"
+            "address"
+            "reserve"
+            "map";
+    }
+
+    .access-item p {
+        text-align: center;
+    }
+
+    .map {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer-deco {
+        bottom: 50px;
+        width: 40vw;
+        height: 40vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}

@@ -36,9 +36,13 @@ header {
     background-repeat: no-repeat;
 }
 
+.pc-only,
+.sns-only {
+    display: inline-block;
+}
+
 header li {
     list-style-type: none;
-    display: inline-block;
     padding: 10px;
     text-transform: capitalize;
 }
@@ -191,7 +195,7 @@ h3 {
 .parallax-content .right-bottom {
     position: absolute;
     right: 0;
-    bottom: -0.5px;
+    bottom: 0;
     width: 346px;
     height: 290px;
     background-image: url(../images/deco-white@1x.png);
@@ -285,8 +289,9 @@ h3 {
 
 .menuDetailSec .star {
     grid-area: star;
-    width: 400px;
-    display: block;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
     margin: auto;
 }
 
