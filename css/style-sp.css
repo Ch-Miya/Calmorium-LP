@@ -1,27 +1,23 @@
 @media screen and (max-width: 640px) {
-    h3 {
-        width: 60%;
-    }
-
     header {
-        height: 100%;
-        padding: 5% 50px;
+        position: sticky;
+        height: 100px;
+        top: 0;
+        z-index: 100;
     }
 
     .hamburger {
-        position: fixed;
-        top: 20px;
-        right: 20px;
+        position: relative;
         width: 30px;
-        cursor: pointer;
-        z-index: 100;
+        z-index: 200;
+        margin-left: 20px;
     }
 
     .hamburger span {
         display: block;
-        height: 3px;
+        height: 2px;
         width: 100%;
-        background-color: #333;
+        background-color: #fdfdfd;
         margin: 5px 0;
         transition: 0.4s;
     }
@@ -126,6 +122,10 @@
         margin-left: 0;
     }
 
+    .menu-block {
+        width: 350px;
+    }
+
     .menuDetailSec {
         padding: 20px 5%;
         grid-template-columns: 1fr;
@@ -139,7 +139,7 @@
     }
 
     .menu-img-wrap {
-        max-width: 60%;
+        max-width: 80%;
         margin: 0 auto;
     }
 
@@ -166,6 +166,7 @@
     }
 
     .food-menu {
+        padding: 20px 5%;
         gap: 30px;
         grid-template-columns: 1fr;
     }
@@ -219,5 +220,9 @@
         height: 40vw;
         max-width: 200px;
         max-height: 200px;
+    }
+
+    .page-top {
+        display: none;
     }
 }
