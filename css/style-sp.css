@@ -1,11 +1,13 @@
+/* レスポンシブ対応 */
 @media screen and (max-width: 640px) {
+    /* ヘッダー */
     header {
-        position: sticky;
+        position: sticky; /* 位置固定 */
         height: 100px;
         top: 0;
         z-index: 100;
     }
-
+    /* ハンバーガーメニュー */
     .hamburger {
         position: relative;
         width: 30px;
@@ -32,13 +34,15 @@
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
+    /* ハンバーガーメニューが開いているときは背景のスクロールをOFF */
     .no-scroll {
         overflow: hidden;
     }
 
+    /* ナビゲーション */
     .sp-nav {
         position: fixed;
         top: 0;
@@ -48,9 +52,6 @@
         background: rgb(139, 189, 150);
         z-index: 99;
         display: none;
-    }
-    .sp-nav.open {
-        display: block;
     }
     .sp-nav ul {
         display: flex;
@@ -80,15 +81,18 @@
         color: white;
     }
 
+    /* ロゴサイズ調整 */
     .logo-block {
         width: 40%;
     }
 
+    /* カナロゴとPC用メニューは非表示 */
     .kana-logo,
     .pc-menu {
         display: none;
     }
 
+    /* SP版はパララックスを停止 */
     .parallax-wrapper {
         height: 60vh;
         min-height: 300px;
@@ -107,6 +111,7 @@
         max-height: 200px;
     }
 
+    /* コンセプト */
     .concept-item {
         flex-direction: column;
         margin: 0 5% 60px;
@@ -122,6 +127,7 @@
         margin-left: 0;
     }
 
+    /* メニュー */
     .menu-block {
         width: 350px;
     }
@@ -175,6 +181,7 @@
         width: 60%;
     }
 
+    /* お知らせ */
     .news_list li {
         grid-template-columns: 1fr;
         gap: 6px;
@@ -189,6 +196,7 @@
         justify-content: center;
     }
 
+    /* アクセス */
     .access-item {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -214,6 +222,7 @@
         height: 100%;
     }
 
+    /* フッター */
     .footer-deco {
         bottom: 50px;
         width: 40vw;
@@ -222,6 +231,7 @@
         max-height: 200px;
     }
 
+    /* Topへ移動は非表示 */
     .page-top {
         display: none;
     }

@@ -1,14 +1,15 @@
 $(function () {
-    $(".hamburger").click(function () {
-        $(".sp-nav").toggleClass("open");
-        $("html").toggleClass("no-scroll");
-        $(this).toggleClass("active");
-    });
+    $(".hamburger").on("click", function () {
+        const isOpen = $(".sp-nav").hasClass("open");
 
-    // メニュー内リンクをクリックしたら閉じる
-    $(".sp-nav a").click(function () {
-        $(".sp-nav").removeClass("open");
-        $(".hamburger").removeClass("active");
-        $("html").removeClass("no-scroll");
+        if (isOpen) {
+            $(".sp-nav").removeClass("open");
+            $("body").removeClass("no-scroll");
+        } else {
+            $(".sp-nav").addClass("open");
+            $("body").addClass("no-scroll");
+        }
+
+        $(this).toggleClass("active");
     });
 });
