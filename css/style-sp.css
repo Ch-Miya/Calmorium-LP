@@ -7,6 +7,11 @@
         top: 0;
         z-index: 100;
     }
+
+    header h1 {
+        width: 200px;
+    }
+
     /* ハンバーガーメニュー */
     .hamburger {
         position: relative;
@@ -49,7 +54,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgb(139, 189, 150);
+        background: #425377;
         z-index: 99;
         display: none;
     }
@@ -68,8 +73,8 @@
         text-align: center;
         background-image: linear-gradient(
             to right,
-            white,
-            white 10px,
+            #fdfdfd,
+            #fdfdfd 10px,
             transparent 10px,
             transparent 15px
         );
@@ -83,7 +88,7 @@
 
     /* ロゴサイズ調整 */
     .logo-block {
-        width: 40%;
+        width: 50%;
     }
 
     /* カナロゴとPC用メニューは非表示 */
@@ -92,9 +97,13 @@
         display: none;
     }
 
+    section {
+        scroll-margin-top: 100px;
+    }
+
     /* SP版はパララックスを停止 */
     .parallax-wrapper {
-        height: 60vh;
+        height: 80vh;
         min-height: 300px;
     }
 
@@ -111,10 +120,24 @@
         max-height: 200px;
     }
 
+    .parallax-content .left-top {
+        background-image: url(../images/deco-blue@2x.png);
+    }
+
+    .parallax-content .right-bottom {
+        background-image: url(../images/deco-white@2x.png);
+    }
+
+    .parallax.p2 {
+        background-image: url(../images/store@2x.png);
+    }
+
     /* コンセプト */
     .concept-item {
         flex-direction: column;
-        margin: 0 5% 60px;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto;
         gap: 24px;
     }
 
@@ -128,12 +151,18 @@
     }
 
     /* メニュー */
+    .menu-bg {
+        padding-top: 150px;
+        background-image: url(../images/star@2x.png);
+    }
+
     .menu-block {
         width: 350px;
     }
 
     .menuDetailSec {
-        padding: 20px 5%;
+        width: 70%;
+        margin: 0 auto;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 24px;
@@ -160,7 +189,6 @@
     }
 
     .reverse {
-        padding: 20px 5%;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 24px;
@@ -172,13 +200,15 @@
     }
 
     .food-menu {
-        padding: 20px 5%;
-        gap: 30px;
+        width: 70%;
+        margin: 0 auto;
+        gap: 24px;
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 
     .food-menu img {
-        width: 60%;
+        max-width: 60%;
     }
 
     /* お知らせ */
@@ -205,6 +235,7 @@
             "address"
             "reserve"
             "map";
+        gap: 20px;
     }
 
     .access-item p {
@@ -224,11 +255,11 @@
 
     /* フッター */
     .footer-deco {
-        bottom: 50px;
         width: 40vw;
         height: 40vw;
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 150px;
+        max-height: 150px;
+        background-image: url(../images/deco-blue-footer@2x.png);
     }
 
     /* Topへ移動は非表示 */

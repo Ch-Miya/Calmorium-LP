@@ -3,13 +3,25 @@ $(function () {
         const isOpen = $(".sp-nav").hasClass("open");
 
         if (isOpen) {
-            $(".sp-nav").removeClass("open");
-            $("body").removeClass("no-scroll");
+            closeMenu();
         } else {
-            $(".sp-nav").addClass("open");
-            $("body").addClass("no-scroll");
+            openMenu();
         }
-
-        $(this).toggleClass("active");
     });
+
+    $(".sp-nav a").on("click", function () {
+        closeMenu();
+    });
+
+    function openMenu() {
+        $(".sp-nav").addClass("open");
+        $(".hamburger").addClass("active");
+        $("body").addClass("no-scroll");
+    }
+
+    function closeMenu() {
+        $(".sp-nav").removeClass("open");
+        $(".hamburger").removeClass("active");
+        $("body").removeClass("no-scroll");
+    }
 });

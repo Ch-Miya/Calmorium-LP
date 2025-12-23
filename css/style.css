@@ -70,8 +70,14 @@ header li a {
     color: #fdfdfd;
 }
 
-header #top {
+header h1 {
     width: 280px;
+}
+
+header h1 img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .logo-SNS img {
@@ -211,8 +217,8 @@ h3 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 365px;
-    height: 320px;
+    width: 364px;
+    height: 364px;
     background-image: url(../images/deco-blue@1x.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -222,8 +228,8 @@ h3 {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 346px;
-    height: 290px;
+    width: 364px;
+    height: 364px;
     background-image: url(../images/deco-white@1x.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -614,6 +620,10 @@ h3 {
 }
 
 /* フッター */
+.footer-wrap {
+    position: relative;
+}
+
 footer {
     background-color: #425377;
     text-align: center;
@@ -623,10 +633,10 @@ footer {
 
 .footer-deco {
     position: absolute;
-    left: 0px;
-    bottom: 0px;
-    width: 283px;
-    height: 276px;
+    left: 0;
+    bottom: 0;
+    width: 282px;
+    height: 282px;
     background-image: url(../images/deco-blue-footer@1x.png);
     background-size: cover;
     background-repeat: no-repeat;
